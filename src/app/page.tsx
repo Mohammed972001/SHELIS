@@ -1,8 +1,24 @@
+import HomeComponent from "../../components/Homepage/HeroSec/Home";
+import CollectionsSection from "../../components/Homepage/CollectionsSection";
+import MarqueeBar from "../../components/Homepage/MarqueeBar";
+import DealsOfTheDay from "../../components/Homepage/DealsOfTheDay";
+import ShopByCategory from "../../components/Homepage/ShopByCategory";
+import OurProducts from "../../components/Homepage/OurProducts";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-   
+    <div className="w-full min-h-screen bg-white">
+      <HomeComponent/>
+      <CollectionsSection/>
+      <div className="relative z-0">
+        <MarqueeBar
+          speed={45}
+          className="text-black bg-primary-light"
+        />
+      </div>
+      <DealsOfTheDay />
+      <ShopByCategory />
+      <OurProducts />
     </div>
   );
 }
